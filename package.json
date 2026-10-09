@@ -1,0 +1,11 @@
+{
+  "name": "sard-local",
+  "version": "0.1.0-alpha.1",
+  "private": true,
+  "description": "سَرد — مساحة عربية محلية لكتابة القصص وبناء عوالمها",
+  "scripts": {
+    "start": "node server.cjs",
+    "build": "node make-offline.cjs",
+    "check": "node --check dist/app.js"
+  }
+}
