@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#102E50"><meta name="description" content="سَرد — مساحة محلية لكتابة قصتك وبناء عالمها، تعمل دون اتصال.">
+<title>سَرد — مساحة حكايتك</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23102E50'/%3E%3Cpath d='M15 43Q32 9 49 43M23 42h18' fill='none' stroke='%23F5C45E' stroke-width='5'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="background" id="background"></div>
+<aside class="sidebar">
+ <a class="brand" href="#characters" aria-label="سَرد الرئيسية"><span class="brand-mark">◈</span><span>سَرد<span class="brand-sub">مساحة حكايتك</span></span></a>
+ <button class="world-switch" id="worldButton"><span class="world-icon">☾</span><span><small>عالمك الحالي</small><b id="worldName">أنشئ عالمك</b></span><span class="chevron">⌄</span></button>
+ <div class="nav-label">عالم الحكاية</div>
+ <nav id="nav"></nav>
+ <div class="sidebar-bottom"><div class="local-info"><span class="local-dot"></span><span>قصتك، على جهازك<small id="saveState">الحفظ التلقائي مفعّل</small></span></div><button id="settingsButton" class="settings-button">⚙ <span>المظهر والإعدادات</span></button><div class="version">سَرد <span>ألفا 0.1.0</span></div></div>
+</aside>
+<div class="workspace">
+ <header class="topbar"><div class="breadcrumb"><span id="crumbWorld">أنشئ عالمك</span><span class="slash">/</span><b id="crumbPage">الشخصيات</b></div><div class="top-actions"><button id="mobileSettings" class="quiet-button" aria-label="المظهر والإعدادات">⚙</button><button id="exportButton" class="quiet-button">↓ <span>نسخة احتياطية</span></button><span class="divider"></span><span class="saved-badge" id="savedBadge">✓ محفوظ محليًا</span><button class="user-avatar" id="worldAvatar" aria-label="إعدادات العالم">م</button></div></header>
+ <main id="main" tabindex="-1"></main>
+ <footer class="workspace-footer"><span>كل التفاصيل الصغيرة تصنع عالمًا كبيرًا.</span><span>محفوظ على جهازك <i></i> مساحة تصنعها بخيالك</span></footer>
+</div>
+<dialog id="modal"><form id="modalForm"><header class="modal-header"><div><small id="modalEyebrow">من عالم حكايتك</small><h2 id="modalTitle"></h2></div><button type="button" id="closeModal" class="icon-button" aria-label="إغلاق">×</button></header><div id="modalBody"></div><footer class="modal-footer" id="modalFooter"></footer></form></dialog>
+<div id="toast" class="toast" role="status"></div>
+<input type="file" id="importInput" accept=".json,application/json" hidden>
+<script src="app.js"></script>
+</body></html>
